@@ -39,7 +39,7 @@ public:
 	}
 
 private:
-	static constexpr size_t n{100000000};
+	static constexpr size_t n{100'000'000};
 
 	template<typename T, typename R>
 	static auto leftTriangle(T&& f, pair<R, R> range) {
@@ -50,10 +50,10 @@ private:
 			/*
 			 * SUM(f(x_i))
 			 */
-			ret += f( range.first
-				  +
-				  i * h
-				 );
+			ret += fabs(f( range.first
+				       +
+				       i * h
+				       ));
 		return ret * h;
 	}
 
@@ -66,13 +66,13 @@ private:
 			/*
 			 * SUM(f(x_i) + f(x_(i-1)))
 			 */
-			ret +=  f(range.first
-				  +
-				  h * i)
-				+
-				f(range.first
-				  +
-				  h * (i - 1));
+			ret += fabs( f(range.first
+				       +
+				       h * i)
+				     +
+				     f(range.first
+				       +
+				       h * (i - 1)) );
 		return ret * h / 2;
 	}
 
@@ -85,12 +85,12 @@ private:
 			/*
 			 * SUM(f(x_i+h/2))
 			 */
-			ret += f( range.first
+			ret += fabs( f( range.first
 				  +
 				  h * (2 * i + 1)
 					 /
 					 2
-				 );
+				 ));
 		return ret * h;
 	}
 };
@@ -98,7 +98,7 @@ private:
 int main()
 {
 	auto my_integral = [](auto x) -> double {
-		return (x*x); // Только такое могу сам решить(
+		return (-x*x); // Только такое могу сам решить(
 //		return (x*x*x - 4*sin(x*M_PI))/(x);
 	};
 	auto my_range = make_pair(-10, 10);
