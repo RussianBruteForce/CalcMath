@@ -111,7 +111,7 @@ int main()
 				    Integral::Method::Trapezium);
 
 	cout << "Left Tri" << "\t| " << "Center Tri" << "\t| " << "Trapez\n"
-	     << ansLT << "\t| " << ansCT << "\t| " << ansT << endl;
+	     << ansLT << " \t| " << ansCT << "\t| " << ansT << endl;
 	return 0;
 }
 
