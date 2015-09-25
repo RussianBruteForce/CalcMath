@@ -64,9 +64,9 @@ private:
 			 */
 			ret += fabs( f(range.first
 				       +
-				       h * i)
-				     +
-				     f(range.first
+				       h * i))
+			       +
+			       fabs( f(range.first
 				       +
 				       h * (i - 1)) );
 		return ret * h / 2;
