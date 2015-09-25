@@ -6,9 +6,6 @@
 
 using namespace std;
 
-/*
- * Determine
- */
 class Integral {
 public:
 	Integral() = delete;
