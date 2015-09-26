@@ -12,30 +12,30 @@ function myDichotomy(a, b, fun, prec)
     return (a+b)/2
 end
 
--- просто для проверки
+-- Just simple check
 sqrt2 = function(x)
     return x*x - 2
 end
 
--- тригонометрия
+-- Trigonometry
 sinXPlusPiPow2PlusX = function(x)
     return math.sin(x) - 2/3
 end
 
--- гипербола
+-- Hyperbole
 xPow2DivXPlus1 = function(x)
     return  math.pow(x, 2)/(x+1) - 5
 end
 
--- с какого-то сайта примеров сложных ф-й
+-- Composite function
 sqrtXPow3Min12X = function(x)
     return math.sqrt(9*math.pow(x, 3) - 12*x + 5) + 20
 end
 
--- пользуем %f для уменьшения выводимых знаков до нужных нам 6 после запятой
+-- Using %f for tail reduction
 print(string.format('%f',myDichotomy(0, 2, sqrt2, eps)))
     
--- в радианах
+-- In radians
 print(string.format('%f radian',myDichotomy(-math.pi, math.pi, sinXPlusPiPow2PlusX, eps)))
 
 print(string.format('%f',myDichotomy(0, 10, xPow2DivXPlus1, eps)))
