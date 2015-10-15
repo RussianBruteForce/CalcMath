@@ -3,3 +3,6 @@ gmon*
 pref
 *.o
 *.user
+*.aux
+*.log
+*synctex.gz
