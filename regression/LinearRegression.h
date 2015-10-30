@@ -5,7 +5,6 @@
 #include <cmath>
 #include <cassert>
 #include <numeric>
-#include <iostream>
 
 template<class T>
 class LinearRegression // with two independent variables
@@ -74,7 +73,6 @@ T LinearRegression<T>::predict(const T x, const T y) const
 		c = (sum(X, Y)*sum(X, Z)*sum(Y)-sum(X)*sum(X, Z)*sumPOW(Y)+(sum(X)*sum(X, Y)-sumPOW(X)*sum(Y))*sum(Y, Z)+(sumPOW(X)*sumPOW(Y)-pow(sum(X, Y),2))*sum(Z))/((n*sumPOW(X)-pow(sum(X),2))*sumPOW(Y)-sumPOW(X)*pow(sum(Y),2)+2*sum(X)*sum(X, Y)*sum(Y)-n*pow(sum(X, Y),2));
 		cached = true;
 	}
-	std::cout << a << ' ' << b << ' ' << c << ' ' << std::endl;
 	return a*x + b*y + c;
 }
 
