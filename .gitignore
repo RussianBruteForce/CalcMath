@@ -6,3 +6,4 @@ pref
 *.aux
 *.log
 *synctex.gz
+__py*
