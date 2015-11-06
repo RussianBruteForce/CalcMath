@@ -12,7 +12,7 @@ class Plot:
 			f.write('{0} {1}\n'.format(x[0], x[1]))
 		f.close()
 	
-		command = "plot {a} with lines, \'{e}\' with lines;".format(a = function, e = Plot.tmp_file)
+		command = "plot {a} with lines, \'{e}\' with lines title \'method\';".format(a = function, e = Plot.tmp_file)
 		
 		Plot.plotCommand(command, output)
 		
