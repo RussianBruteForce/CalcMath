@@ -33,12 +33,24 @@ diffs = [
 	]
 
 if __name__ == '__main__':
+	#fun = lambda x, y: 3*x+2*y
+	#print (Euler.euler(fun,1,0,10,1))
+	
+	
+	p = Euler.rungeKutta1(lambda x, y: 2*x+2*y, 1,0,10,1)
+	
+	for x in p:
+		print (x)
+		
+	#k = lambda x: 
+	print("\n",)
+	
 	i = 0
-	for x in diffs:
-		e = Euler.euler(x.dif, x.init, x.a, x.b, x.step)
-		Plot.plotFunctionAndCurve(x.fa, e, str(i) + 'euler.png')
-		rk1 = Euler.rungeKutta1(x.dif, x.init, x.a, x.b, x.step)
-		Plot.plotFunctionAndCurve(x.fa, rk1, str(i) + 'rk1.png')
-		rk4 = Euler.rungeKutta4(x.dif, x.init, x.a, x.b, x.step)
-		Plot.plotFunctionAndCurve(x.fa, rk4, str(i) + 'rk4.png')
-		i+=1
+	#for x in diffs:
+	#	e = Euler.euler(x.dif, x.init, x.a, x.b, x.step)
+	#	Plot.plotFunctionAndCurve(x.fa, e, str(i) + 'euler.png')
+	#	rk1 = Euler.rungeKutta1(x.dif, x.init, x.a, x.b, x.step)
+	#	Plot.plotFunctionAndCurve(x.fa, rk1, str(i) + 'rk1.png')
+	#	rk4 = Euler.rungeKutta4(x.dif, x.init, x.a, x.b, x.step)
+	#	Plot.plotFunctionAndCurve(x.fa, rk4, str(i) + 'rk4.png')
+	#	i+=1
