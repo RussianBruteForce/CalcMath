@@ -10,3 +10,4 @@
 * **simpson** — D realization of Simpson's rule. It uses a parabolic curve to approximate integrals.
 * **lagrange** — calculated in Maxima Lagrande Polynominal
 * **regression** — C++ realization of Linear Regression with two independed variables
+* **partial_diff** — PDE in C
